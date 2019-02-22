@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-392-Is-Subsequence/Solution.h
+string
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-392-Is-Subsequence/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-392-Is-Subsequence/Solution.h
+

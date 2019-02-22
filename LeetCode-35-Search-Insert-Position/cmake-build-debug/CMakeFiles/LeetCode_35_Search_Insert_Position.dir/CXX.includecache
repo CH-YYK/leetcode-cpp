@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-35-Search-Insert-Position/Solution.h
+vector
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-35-Search-Insert-Position/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-35-Search-Insert-Position/Solution.h
+

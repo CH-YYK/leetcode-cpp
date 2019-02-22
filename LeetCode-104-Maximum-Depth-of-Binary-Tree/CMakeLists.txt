@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.13)
+project(LeetCode_104_Maximum_Depth_of_Binary_Tree)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(LeetCode_104_Maximum_Depth_of_Binary_Tree main.cpp)

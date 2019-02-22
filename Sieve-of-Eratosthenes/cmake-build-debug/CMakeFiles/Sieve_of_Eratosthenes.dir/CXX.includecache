@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/Sieve-of-Eratosthenes/Solution.h
+iostream
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/Sieve-of-Eratosthenes/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/Sieve-of-Eratosthenes/Solution.h
+

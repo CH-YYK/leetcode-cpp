@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/Search-Binary-Search/Solution.h
+vector
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/Search-Binary-Search/Solution2.h
+vector
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/Search-Binary-Search/main.cpp
+iostream
+-
+vector
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/Search-Binary-Search/Solution.h
+Solution2.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/Search-Binary-Search/Solution2.h
+

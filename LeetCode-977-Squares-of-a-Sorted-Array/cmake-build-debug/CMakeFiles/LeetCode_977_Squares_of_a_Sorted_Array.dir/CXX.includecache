@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-977-Squares-of-a-Sorted-Array/Solution.h
+vector
+-
+math.h
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-977-Squares-of-a-Sorted-Array/Solution2.h
+vector
+-
+math.h
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-977-Squares-of-a-Sorted-Array/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-977-Squares-of-a-Sorted-Array/Solution.h
+Solution2.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-977-Squares-of-a-Sorted-Array/Solution2.h
+vector
+-
+

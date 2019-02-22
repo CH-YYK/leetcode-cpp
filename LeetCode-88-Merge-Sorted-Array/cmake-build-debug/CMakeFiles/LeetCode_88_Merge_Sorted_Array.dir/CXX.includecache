@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-88-Merge-Sorted-Array/Solution.h
+vector
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-88-Merge-Sorted-Array/Solution2.h
+vector
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-88-Merge-Sorted-Array/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-88-Merge-Sorted-Array/Solution.h
+Solution2.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-88-Merge-Sorted-Array/Solution2.h
+

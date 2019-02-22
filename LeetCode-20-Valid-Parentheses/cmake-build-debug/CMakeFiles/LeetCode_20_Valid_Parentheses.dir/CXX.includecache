@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-20-Valid-Parentheses/Solution.h
+string
+-
+vector
+-
+unordered_map
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-20-Valid-Parentheses/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-20-Valid-Parentheses/Solution.h
+string
+-
+unordered_map
+-
+map
+-
+iterator
+-
+

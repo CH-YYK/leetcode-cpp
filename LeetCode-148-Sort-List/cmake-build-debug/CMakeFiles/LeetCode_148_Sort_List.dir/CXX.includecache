@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-148-Sort-List/ListNode.h
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-148-Sort-List/Solution.h
+ListNode.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-148-Sort-List/ListNode.h
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-148-Sort-List/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-148-Sort-List/Solution.h
+

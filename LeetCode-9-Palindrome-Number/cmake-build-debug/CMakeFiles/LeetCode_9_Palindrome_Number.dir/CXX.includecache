@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-9-Palindrome-Number/Solution.h
+vector
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-9-Palindrome-Number/Solution2.h
+vector
+-
+math.h
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-9-Palindrome-Number/Solution3.h
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-9-Palindrome-Number/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-9-Palindrome-Number/Solution.h
+Solution2.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-9-Palindrome-Number/Solution2.h
+Solution3.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-9-Palindrome-Number/Solution3.h
+

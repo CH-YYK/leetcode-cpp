@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/Sorting-QuickSort/Solution.h
+vector
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/Sorting-QuickSort/Solution2.h
+vector
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/Sorting-QuickSort/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/Sorting-QuickSort/Solution.h
+string
+-
+Solution2.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/Sorting-QuickSort/Solution2.h
+

@@ -1,0 +1,3 @@
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-392-Is-Subsequence/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-392-Is-Subsequence/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-392-Is-Subsequence/cmake-build-debug/CMakeFiles/LeetCode_392_Is_Subsequence.dir

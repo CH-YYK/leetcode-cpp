@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-973-K-Closest-Points-to-Origin/Solution.h
+vector
+-
+
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-973-K-Closest-Points-to-Origin/main.cpp
+iostream
+-
+Solution.h
+/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-973-K-Closest-Points-to-Origin/Solution.h
+vector
+-
+

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.13)
+project(LeetCode_973_K_Closest_Points_to_Origin)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(LeetCode_973_K_Closest_Points_to_Origin main.cpp)

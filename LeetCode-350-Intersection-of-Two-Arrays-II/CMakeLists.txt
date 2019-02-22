@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.13)
+project(LeetCode_350_Intersection_of_Two_Arrays_II)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(LeetCode_350_Intersection_of_Two_Arrays_II main.cpp)
