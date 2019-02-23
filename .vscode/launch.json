@@ -1,0 +1,10 @@
+// launch.json
+{
+    "name": "Launch Mandelbrot",
+    "type": "lldb",
+    "request": "launch",
+    "program": "${workspaceRoot}/mandelbrot",
+    "initCommands": [
+        "command script import ${workspaceRoot}/debugvis.py" // <<<<< This is the important bit
+    ]
+}

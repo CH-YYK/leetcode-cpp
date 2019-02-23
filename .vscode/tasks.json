@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "--std=c++11",
+                "${file}",
+                "-o",
+                "${workspaceRoot}/${fileBasename}.out"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "execute Cppoutput",
+            "type": "shell",
+            "command": "${workspaceRoot}/${fileBasename}.out",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
