@@ -46,3 +46,54 @@ public:
         return ans;
     }
 };
+
+class Solution3 {
+    // DP version O(n) in time O(2n) in space
+    // where dp[i][0] refer to the minimum steps of flip needed when 
+    // String[0:i] form a monotune string given ith character is '0'
+public:
+    int minFlipsMonoIncr(string S) {
+        const int n = S.size();
+        vector<vector<int>> dp(n+1, vector<int>(2));
+        for(int i = 1; i <= n; i++) {
+            if(S[i-1] == '0'){
+                dp[i][0] = dp[i-1][0];
+                dp[i][1] = min(dp[i-1][0], dp[i-1][1]) + 1;
+            } else {
+                dp[i][0] = dp[i-1][0] + 1;
+                dp[i][1] = min(dp[i-1][1], dp[i-1][0]);
+            }
+        }
+        return min(dp[n][0], dp[n][1]);
+    }
+};
+
+class Solution4 {
+    // DP version O(n) in time O(1) in space
+    // updated version for the above one.
+    // as dp[i][0] rely on dp[i-1][0] and whether S[i] == 1
+    // and dp[i][1] rely on both dp[i-1][0], dp[i-1][1] and whether S[i] == 0
+public:
+    int minFlipsMonoIncr(string S) {
+        const int n = S.size();
+        int initial0, initial1;
+        initial0 = (int)(S[0] == '1');
+        initial1 = (int)(S[0] == '0');
+
+        for(int i = 1; i <= n; i++) {
+            initial1 = min(initial0, initial1) + (S[i] == '0');
+            initial0 = initial0 + (S[i] == '1');
+        }    
+        return min(initial0, initial1);
+    }
+};
+
+int main() {
+    string S = "00110";
+    int ans = Solution4().minFlipsMonoIncr(S);
+    cout << ans << "\n";
+    int x = '1' - '1';
+    cout << x << "\n";
+    cout << str << "\n";
+    return 0;
+}
