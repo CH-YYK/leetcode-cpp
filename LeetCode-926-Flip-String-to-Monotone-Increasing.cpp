@@ -94,6 +94,5 @@ int main() {
     cout << ans << "\n";
     int x = '1' - '1';
     cout << x << "\n";
-    cout << str << "\n";
     return 0;
 }
