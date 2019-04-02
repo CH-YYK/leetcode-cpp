@@ -19,47 +19,25 @@ public:
 };
 
 class Solution {
-    unordered_set<Node*> visited;
     unordered_map<Node*, Node*> hashmap;
-public:
+public: 
     Node* cloneGraph(Node* node) {
-        // copy nodes
-        dfs(node);
-        visited.clear();
+        if(node == NULL) return NULL;
+        Node* newNode = new Node(node->val, {});
+        hashmap[node] = newNode;
+        queue<Node*> todo({node});
 
-        // copy edges
-        Node* newNode = new Node();
-        newNode->val = node->val;
-        Node* curr = newNode;
-        queue<Node*> origin({node});
-        queue<Node*> copy({curr});
-
-        while(!origin.empty()) {
-            Node* tmp_origin = origin.front();
-            Node* tmp_copy = copy.front();
-            origin.pop();
-            copy.pop();
-
-            visited.insert(tmp_origin);
-
-            for(auto i: tmp_origin->neighbors) {
-                tmp_copy->neighbors.push_back(hashmap[i]);
-                if(visited.count(i)) continue;
-                origin.push(i);
-                copy.push(hashmap[i]);
+        while(!todo.empty()) {
+            Node* curr = todo.front();
+            todo.pop();
+            for(Node* neighbor : curr->neighbors) {
+                if(!hashmap.count(neighbor)){
+                    hashmap[neighbor] = new Node(neighbor->val, {});
+                    todo.push(neighbor);
+                }
+                hashmap[curr]->neighbors.push_back(hashmap[neighbor]);
             }
         }
         return newNode;
-    }
-
-    void dfs(Node* node) {
-        if(visited.count(node)) return;
-        Node* curr = new Node();
-        curr->val = node->val;
-        hashmap[node] = curr;
-        visited.insert(node);
-        for(auto i: node->neighbors) {
-            dfs(i);
-        }
     }
 };
