@@ -99,11 +99,11 @@ class Solution3 {
      * 
      * add Memoization
      *      duplicates: isMatch(i, j)
-     * 
+     *                                                                                                                                                                                                                                                                   
      * Dynamic programming
      *      if s[i] == p[j] || p[j] == '.' --> dp[i][j] = dp[i-1][j-1]
      *      if s[i] != p[j] && p[j] != '*':
-     *              --> dp[i][j] = False
+     *              --> dp[i][j] = False                                                                           
      *      if p[j] == '*':
      *              --> dp[i][j] = dp[i][j-1] # single preceeding character
      *              --> dp[i][j] = dp[i][j-2] # zero preceding character
@@ -114,21 +114,23 @@ public:
     bool isMatch(string s, string p) {
         int m = s.size();
         int n = p.size();
-        vector<vector<int>> dp(m+1, vector<int>(n+1, -1));
-        for(int i = 0; i < m; i++) {
+        vector<vector<int>> dp(m+1, vector<int>(n+1, 0));
+        for(int i = 0; i <= m; i++) {
             dp[i][0] = i == 0 ? 1 : 0;
         }
 
-        for(int i = 0; i <= m; i++) {
+        for(int j = 2; j <= n; j+=2) {
+            dp[0][j] = p[j-1] == '*' ? 1 : 0;
+        }
+
+        for(int i = 1; i <= m; i++) {
             for(int j = 1; j <= n; j++) {
-                if(s[i] == p[j] || p[j] == '.') 
+                if(s[i-1] == p[j-1] || p[j-1] == '.') 
                     dp[i][j] = dp[i-1][j-1];
-                if(s[i] != p[j] && p[j] != '*') 
-                    dp[i][j] = 0;
-                else if(p[j] == '*'){
+                if(p[j-1] == '*'){
                     bool c0 = dp[i][j-2];
                     bool c1 = dp[i][j-1];
-                    bool c2 = i >= 1 ? dp[i-1][j] && (s[i] == p[j-1] || p[j-1] == '.') : false;
+                    bool c2 = i >= 1 ? dp[i-1][j] && (s[i-1] == p[j-2] || p[j-2] == '.') : false;
                     dp[i][j] = c0 || c1 || c2;
                 }
             }
@@ -140,8 +142,8 @@ public:
 
 
 int main() {
-    string s = "ab";
+    string s = "aa";
     string p = ".*";
-    bool ans = Solution().isMatch(s, p);
+    bool ans = Solution3().isMatch(s, p);
     cout << ans;
 }
