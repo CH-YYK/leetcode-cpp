@@ -28,7 +28,7 @@ public:
             slow = tmp;
         }
 
-        while(pre != head && head && pre) {
+        while(pre != head && head && pre->next) {
             ListNode* tmp = head->next;
             ListNode* tmp2 = pre->next;
             head->next = pre;
@@ -36,6 +36,5 @@ public:
             pre = tmp2;
             head = tmp;
         }
-        
     }
-};
+};git 
