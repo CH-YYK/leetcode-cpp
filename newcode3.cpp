@@ -32,18 +32,17 @@ private:
             while(size-- > 0) {
                 pair<int, int> curr = Q.front();
                 Q.pop();
-                if(curr.first < 0 || curr.first == N) 
-                    continue;
-                if(curr.second < 0 || curr.second == N) 
-                    continue;
-                if(graph[curr.first][curr.second] == '#') continue;
 
                 if(graph[curr.first][curr.second] == '*') return step;
 
-                Q.push({curr.first + 1, curr.second});
-                Q.push({curr.first - 1, curr.second});
-                Q.push({curr.first, curr.second + 1});
-                Q.push({curr.first, curr.second - 1});
+                if(curr.first + 1 < N && graph[curr.first + 1][curr.second] != '#')
+                    Q.push({curr.first + 1, curr.second});
+                if(curr.first - 1 >= 0 && graph[curr.first - 1][curr.second] != '#') 
+                    Q.push({curr.first - 1, curr.second});
+                if(curr.second + 1 < N && graph[curr.first][curr.second + 1] != '#')
+                    Q.push({curr.first, curr.second + 1});
+                if(curr.second - 1 >= 0 && graph[curr.first][curr.second - 1] != '#')
+                    Q.push({curr.first, curr.second - 1});
             }
         }
         return INT_MAX;
@@ -58,18 +57,13 @@ int main(){
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
             char x; scanf("%c",&x);
+            if(x == '\n') continue;
             map[i][j] = x;
         }
     }
 
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n; j++) {
-            cout << map[i][j];
-        }
-        cout << endl;
-    }
-    // int ans = Solution().minpath(map, n);
-    // cout << ans;
+    int ans = Solution().minpath(map, n);
+    cout << ans;
     return 0;
 };
 
