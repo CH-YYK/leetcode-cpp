@@ -35,7 +35,7 @@ public:
                     if(!wordDict.count(currWord)) continue;
 
                     steps[currWord] = step+1;
-                    wordDict.erase(currWord);
+                    wordDict.erase(currWord); // remove: re-reach to current word result in longer path
                     Queue.push(currWord);
                 }
                 currWord[i] = ch;
