@@ -44,3 +44,79 @@ public:
         return 0;
     }
 };
+
+
+class Solution2 {
+    // two-end BFS using set
+public:
+    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+        unordered_set<string> wordDict(wordList.begin(), wordList.end());
+
+        if(!wordDict.count(endWord)) return 0;
+
+        unordered_set<string> q1({beginWord});
+        unordered_set<string> q2({endWord});
+
+        int step = 0;
+        while(!q1.empty() && !q2.empty()) {
+            step++;
+            if(q1.size() > q2.size()) 
+                swap(q1, q2);
+            unordered_set<string> q;
+            for(string w : q1) {
+                for(int i = 0; i < w.size(); i++) {
+                    char ch = w[i];
+                    for(int j = 'a'; j <= 'z'; j++) {
+                        w[i] = j;
+                        if(q2.count(w)) return step + 1;
+                        if(!wordDict.count(w)) continue;
+
+                        wordDict.erase(w);
+                        q.insert(w);
+                    }
+                    w[i] = ch;
+                }
+            }
+            swap(q, q1);
+        }
+        return 0;
+    }
+};
+
+class Solution3 {
+public:
+    int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
+        unordered_set<string> wordDict(wordList.begin(), wordList.end());
+
+        if(!wordDict.count(endWord)) return 0;
+
+        unordered_set<string> q1({beginWord});
+        unordered_set<string> q2({endWord});
+
+        int step = 0;
+        while(!q1.empty() && !q2.empty()) {
+            step++;
+            if(q1.size() > q2.size()) 
+                swap(q1, q2);
+
+            // required: since q1 and q2 are sets that doesn't allow indexing
+            unordered_set<string> q;
+            for(string w : q1) {
+                for(int i = 0; i < w.size(); i++) {
+                    char ch = w[i];
+                    for(int j = 'a'; j <= 'z'; j++) {
+                        w[i] = j;
+                        if(q2.count(w)) return step + 1;
+                        if(!wordDict.count(w)) continue;
+
+                        wordDict.erase(w);
+                        q.insert(w);
+                    }
+                    w[i] = ch;
+                }
+            }
+            swap(q, q1);
+        }
+        return 0;
+    }
+}

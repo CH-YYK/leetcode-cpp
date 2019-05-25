@@ -2,45 +2,90 @@
 #include <iostream>
 #include <limits.h>
 #include <unordered_set>
+#include <queue>
+#include <unordered_set>
 using namespace std;
 
 class Solution {
     // longest path
 public:
-    vector<int> findMinHeightTrees(int n, vector<pair<int, int>>& edges) {
-        graph_ = vector<vector<int>>(n);
-        for(const auto &p : edges)
-            graph_[p.first].push_back(p.second), graph_[p.second].push_back(p.first);
-        
-        
+    vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
+        N = n;
+        graph = vector<vector<int>>(n);
+        for(auto edge : edges) {
+            graph[edge[0]].push_back(edge[1]);
+            graph[edge[1]].push_back(edge[0]);
+        }
+        vector<int> ans(N, INT_MAX);
         vector<int> res;
-        for(int i = 0; i< n; i++)
-            if(ans[i] == curMin) res.push_back(i);
+        for(int i = 0; i < N; i++) {
+            ans[i] = bfs(i);
+            while(!res.empty() && ans[res.back()] > ans[i]) res.pop_back();
+            if(!res.empty() && ans[res.back()] < ans[i]) continue;
+            res.push_back(i);
+        }
         return res;
     }
-
 private:
-    unordered_set<int> visited;
-    vector<vector<int>> graph_;
-    vector<vector<int>> all_paths;
-
-    void dfs(int cur, vector<int>& path, int N) {
-        if(visited.size() == N) {
-            all_paths.push_back(path);
-            return;
+    vector<vector<int>> graph;
+    int N;
+    int bfs(int curr) {
+        queue<int> Q({curr});
+        vector<int> visited(N, 0);
+        int steps = -1;
+        while(!Q.empty()){
+            steps++;
+            int size = Q.size();
+            while(size-- > 0) {
+                int cur = Q.front();
+                Q.pop();
+                visited[cur] = 1;
+                for(int i : graph[cur]) {
+                    if(visited[i]) continue;
+                    Q.push(i);
+                }
+            }
         }
-        if(visited.count(cur)) return;
-        for(int i : graph_[cur]) {
-            path.push_back(i);
-            dfs(i, path, N);
-            path.pop_back();
-        }
-        return;
+        return steps;
     }
 };
 
+class Solution2 {
+    // longest path
+public:
+    vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
+        if(edges.size() == 0) return {0};
+        graph = vector<unordered_set<int>>(n);
+        for(auto edge : edges) {
+            graph[edge[0]].insert(edge[1]);
+            graph[edge[1]].insert(edge[0]);
+        }
+
+        vector<int> leaves;
+        for(int i = 0; i < n; i++) 
+            if(graph[i].size() == 1) leaves.push_back(i);
+        
+        while(n > 2) {
+            n -= leaves.size();
+            vector<int> newleaves;
+            for(int i : leaves) {
+                int j = *graph[i].begin();
+                graph[j].erase(i);
+                if(graph[j].size() == 1) newleaves.push_back(j);
+            }
+            leaves = newleaves;
+        }
+        return leaves;
+    }
+private:
+    vector<unordered_set<int>> graph;
+};
+
+
+
+
 int main() {
-    vector<pair<int, int>> edges = {{1, 0}, {1, 2}, {1, 3}};
+    vector<vector<int>> edges = {{1, 0}, {1, 2}, {1, 3}};
     int n = 4;
     vector<int> ans = Solution().findMinHeightTrees(n, edges);
     for(auto i : ans) cout << i << " ";
