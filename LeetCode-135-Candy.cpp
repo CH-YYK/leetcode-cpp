@@ -2,6 +2,8 @@
 #include <vector>
 #include <limits.h>
 #include <algorithm>
+
+
 using namespace std;
 
 class Solution {
@@ -40,3 +42,26 @@ public:
         return sum;
     }
 };
+
+
+class Solution2 {
+ public:
+  int candy(vector<int>& ratings) {
+    int n = ratings.size();
+    vector<int> candies(n, 1);  // initialize all to 1 since each of them must have at least 1
+
+    for(int i = 1; i < n; ++i) {  // go from left to right and add candies to children if necessary
+      if(ratings[i] > ratings[i-1]) 
+        candies[i] = candies[i-1] + 1;  
+    }
+
+    for(int i = n-1; i >= 0; --i) {  // go from right to left and add candies if necessary
+      if(ratings[i] > ratings[i+1] && candies[i] <= candies[i+1]) 
+        candies[i] = candies[i+1] + 1;
+    }
+
+    int sum_ = 0;
+    for_each(candies.begin(), candies.end(), [&](int x) {sum_+=x;});
+    return sum_;
+  }
+}
