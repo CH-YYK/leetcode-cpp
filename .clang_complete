@@ -1,0 +1,6 @@
+-DDEBUG
+-include ../config.h
+-I../common
+-I/usr/include/c++/7/
+-I/usr/include/c++/7.5.0/
+-std=c++11
