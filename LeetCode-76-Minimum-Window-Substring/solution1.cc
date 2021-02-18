@@ -24,7 +24,8 @@ public:
      * If 't' has been found in the substring [l, r] -> cnt == t.size(),
      * try to increase l to get a shorter substring.
      *
-     * flags[c] == true -> 'c' is in 't'
+     * flags[c] == true -> 'c' is in 't
+     '
      * chars[c] > 0 -> need one 'c' to get 't' in [l, r]
      */
     for(int r = 0; r < s.size(); ++r) {
