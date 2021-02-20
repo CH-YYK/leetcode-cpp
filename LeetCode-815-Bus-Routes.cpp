@@ -9,9 +9,7 @@ class Solution {
     // Two mappings: bus -> stops and stops -> buses
     //          buses determined the edges 
     //          stops determined the nodes
-    
     //          from each step -> for_each bus -> for each stop
-    
     //          stops could be revisited
     //          buses should be unique.
 public:
