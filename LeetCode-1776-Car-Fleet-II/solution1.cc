@@ -4,7 +4,7 @@
  *   - chasing time for (a, b) would be transformed to (a, c) if a catches b later than b catches c 
  */
 
-class Solution { 
+class Solution {
 public:
   vector<double> getCollisionTimes(vector<vector<int>>& A) {
     int n = A.size();
