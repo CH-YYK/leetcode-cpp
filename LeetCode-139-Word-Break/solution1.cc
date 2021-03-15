@@ -1,3 +1,8 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
 class Solution {
 public:
   /* Non-empty string s and word dictionary. verify if s

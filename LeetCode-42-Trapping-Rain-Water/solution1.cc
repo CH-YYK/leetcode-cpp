@@ -3,6 +3,8 @@
 
 using namespace std;
 
+/* Monotone stack find next higher as bar
+ */
 class Solution {
 public:
   int trap(vector<int> &height) {
