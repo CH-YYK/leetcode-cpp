@@ -1,3 +1,7 @@
+#include <vector>
+
+using namespace std;
+
 class Solution {
 public:
   /* Given an integer array nums, return the length of LIS
