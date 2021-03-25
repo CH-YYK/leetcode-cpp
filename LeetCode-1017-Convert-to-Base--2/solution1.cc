@@ -5,7 +5,9 @@
 #include <string>
 
 using namespace std;
-
+/* base2: [0, 1] -> [0, 1, 2]: 2^0 + 2^1 = 2 ^ 0 - 2 ^ 1 + 2 ^ 2
+ *      => (-2) ^ 0 + (-2) ^ 1 + (-2) ^ 2
+ */
 class Solution {
 public:
   string baseNeg2(int N) {
@@ -47,22 +49,3 @@ public:
     return ret;
   }
 };
-
-class Solution {
-public:
-  bool isValidBST(TreeNode *root) {
-    TreeNode *cur = root, *next = nullptr, *pre = nullptr;
-    int val = -2100000000;
-    while (cur != nullptr) {
-      next = cur->left;
-      if (next !=
-          nullptr) { // 有左子树
-        pre = next;
-        while(pre->right != nullptr && pre->right != cur){ pre = pre->right; }
-        if(pre->right == nullptr){
-          pre->right = cur; cur = cur->left; continue; }
-
-        else{ pre->right = nullptr; if(cur->val < val){ return false; }
-          val = cur->val; cur = cur->right; continue; } }
-      // 无左子树
-      if(cur->val < val){ return false; } val = cur->val; cur = cur->right; } return true; } };
