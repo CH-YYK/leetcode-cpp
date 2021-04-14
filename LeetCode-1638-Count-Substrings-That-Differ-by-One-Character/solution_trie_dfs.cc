@@ -46,16 +46,18 @@ private:
       return cnt == 0 ? root->cnt : 0; // 1 character must be changed
 
     int res = 0;
+    // don't change character at this round
     if (root->children[s[i] - 'a'])
       res += dfs(root->children[s[i] - 'a'], s, i + 1, j, cnt);
 
+    // try replacing s[i] to other character
     if (cnt == 1) {
       for (int nc = 0; nc < 26; ++nc) {  // try replacing s[i] to other character
         if(!root->children[nc]) continue;
         if (nc != s[i] - 'a' && cnt == 1)
           res += dfs(root->children[nc], s, i + 1, j, cnt - 1);
       }
-    } 
+    }
     return res;
   }
 };
