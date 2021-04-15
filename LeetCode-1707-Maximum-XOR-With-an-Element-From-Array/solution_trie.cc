@@ -30,7 +30,8 @@ private:
   unique_ptr<TrieNode> root;
 };
 
-/* TC O(N * (2^30))
+/* TC O(N * (2^30
+   ))
  *
  */
 class Solution {
