@@ -47,6 +47,7 @@ private:
   unique_ptr<TrieNode> root;
 };
 
+
 class WordFilter {
 public:
   WordFilter(vector<string> &words) {
@@ -55,11 +56,13 @@ public:
       int m = words[i].size();
       for(int j = 0; j < words[i].size(); ++j) {
         // build search key "suffix{word" and insert to trie
-        string tmp = words[i].substr(j, m - j);
-        tmp += '{';
-        tmp += words[i];
-        trie.insert(tmp, i);
-      }
+        string key = "{" + words[i];
+        string$ w = words[i];
+        for(int j = 0; j < w.size(); ++j) {
+          key = w[w.size() - j - 1] + key;
+          trie.insert(key, i);
+        }
+
     }
   }
 
