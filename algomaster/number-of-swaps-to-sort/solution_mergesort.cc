@@ -21,19 +21,20 @@ int merge_sort(vector<int> &nums, int l, int r) {
   res += merge_sort(nums, k+1, r);
 
   vector<int> cache;
-  int p1 = l, p2 = k+1;
-  while(p1 <= k || p2 <= r) {
-    if(p1 == k + 1 && p2 <= r)
-      cache.push_back(nums[p2++]);
-    else if(p1 <= k && p2 == r + 1)
-      cache.push_back(nums[p1++]);
-    else if(nums[p1] > nums[p2])
-      cache.push_back(nums[p2++]), res += k - p1 + 1; 
+  int lo = l, hi = k + 1;
+  while(lo <= k && hi <= r) {
+    if(nums[hi] < nums[lo])
+      cache.push_back(nums[hi++]), res += k - lo + 1;
     else
-      cache.push_back(nums[p1++]);
+      cache.push_back(nums[lo++]);
   }
-  for(int k = 0; k <= r - l; ++k)
-    nums[k+l] = cache[k];
+  while(lo <= k)
+    cache.push_back(nums[lo++]);
+  while(hi <= r)
+    cache.push_back(nums[hi++]);
+
+  for(int i = 0; i <= r - l; ++i)
+    nums[i+l] = cache[i];
   return res;
 }
 
