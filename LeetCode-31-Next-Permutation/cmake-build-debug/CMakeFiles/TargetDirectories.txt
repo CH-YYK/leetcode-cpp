@@ -1,3 +1,0 @@
-/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-31-Next-Permutation/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-31-Next-Permutation/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-31-Next-Permutation/cmake-build-debug/CMakeFiles/LeetCode_31_Next_Permutation.dir

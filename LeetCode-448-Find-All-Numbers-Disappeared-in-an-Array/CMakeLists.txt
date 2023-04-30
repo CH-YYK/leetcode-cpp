@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 3.13)
-project(LeetCode_448_Find_All_Numbers_Disappeared_in_an_Array)
-
-set(CMAKE_CXX_STANDARD 14)
-
-add_executable(LeetCode_448_Find_All_Numbers_Disappeared_in_an_Array main.cpp)

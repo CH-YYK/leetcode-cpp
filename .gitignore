@@ -3,3 +3,6 @@ CMakeLists.txt
 *.out
 *.ccls-cache/
 *.vscode
+.clang_complete
+*.sublime-project
+*.sublime-workspace

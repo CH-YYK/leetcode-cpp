@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 3.13)
-project(LeetCode_516_Longest_parlindrome_subsequence)
-
-set(CMAKE_CXX_STANDARD 14)
-
-add_executable(LeetCode_516_Longest_parlindrome_subsequence main.cpp)
