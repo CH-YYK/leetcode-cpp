@@ -48,7 +48,7 @@ public:
 			if(n % 2) 
 				res = res * a;
 			a = a * a;
-			b /= 2; // b >>= 1
+			n /= 2; // b >>= 1
 		}
 		return res;
 	}
