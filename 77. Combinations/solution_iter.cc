@@ -22,10 +22,11 @@ cin.tie(NULL);
 class Solution {
 public:
   vector<vector<int>> combine(int n, int k) {
-  	// iteratively simulate dfs process
-  	// using bfs and use the state (path, i) in the queue
-  	// 		for each iteration, 
-  	// 			path.push_back(i + 1), optinally reverse inserting i;
+  	// Iteratively simulate dfs process.
+  	//
+  	// bfs and use the state (path, i) in the queue
+  	// 		at each iteration, we have
+  	// 			path.push_back(i + 1), (optinally) reverse the last change of i;
   	// 
   	// However, the iterative way may work better with cheaper state,
   	//    lots of time would be wasted on redundant state copying.
