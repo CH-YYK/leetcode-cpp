@@ -26,7 +26,7 @@ public:
     	// each child should catch up with the other to make the path sum equal
     	// because the rest of the paths are same.
     	// 
-    	// So, at each level, we'll have 
+    	// So, at each level. 
     	//   ans += abs(child1 - child2);
     	//   root += max(child1, child2);
     	// 
