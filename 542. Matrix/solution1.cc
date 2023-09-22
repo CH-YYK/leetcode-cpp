@@ -1,3 +1,7 @@
+#include <vector>
+
+using namespace std;
+
 class Solution {
 public:
   /* Find the distance of nearest 0 for each cell.
