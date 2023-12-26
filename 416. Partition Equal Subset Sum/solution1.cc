@@ -1,3 +1,10 @@
+#include <string>
+#include <vector>
+#include <stack>
+#include <algorithm>
+#include <numeric>
+using namespace std;
+
 class Solution {
 public:
   /* Given a non-empty array nums containing positive numbers only.
