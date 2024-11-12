@@ -1,3 +1,0 @@
-/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-21-Merge-Two-Sorted-Lists/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-21-Merge-Two-Sorted-Lists/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-21-Merge-Two-Sorted-Lists/cmake-build-debug/CMakeFiles/LeetCode_21_Merge_Two_Sorted_Lists.dir
