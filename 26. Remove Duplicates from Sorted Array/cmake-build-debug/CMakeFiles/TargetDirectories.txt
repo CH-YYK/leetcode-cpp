@@ -1,3 +1,0 @@
-/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-26-Remove-Duplicates-from-Sorted-Array/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-26-Remove-Duplicates-from-Sorted-Array/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/kayleyang/CLionProjects/Algorithm_problems/LeetCode-26-Remove-Duplicates-from-Sorted-Array/cmake-build-debug/CMakeFiles/LeetCode_26_Remove_Duplicates_from_Sorted_Array.dir
