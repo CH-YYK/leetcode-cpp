@@ -7,15 +7,13 @@ using namespace std;
 class Solution {
 public:
   int maxEqualRowsAfterFlips(vector<vector<int>> &matrix) {
-    // Improvement to solution1.cc.
+    // Improvement to solution3.cc.
     //
-    // Instead of saving all digits in row, we can compress the row into a
-    // series of numbers, each number can represent 64 digits.
-    // Thus, 300-sized row can be compressed into 5 numbers at most.
+    // Instead of saving the pattern as a series of integers, we save it as a
+    // constant-sized bitset<300> which support hashing.
     int m = matrix.size();
     int n = matrix[0].size();
     int ans = 0;
-    // (n + 63) / 64.  if n = 64, then 1, if n < 128, then 2.
     unordered_map<bitset<300>, int> keys;
     for (int i = 0; i < m; ++i) {
       bitset<300> key1;
