@@ -7,12 +7,12 @@ OLD_PATTERN = "LeetCode-[0-9]+-.+"
 
 # Reformat pattern `LeetCode-<num>-Problem-Name` to `<num>. Problem Name`
 def reformat_dir_pattern(orgin: str) -> str:
-    number = re.search(r'[0-9]+', orgin)
-    names = re.findall(r'[A-Za-z]+', orgin)[1:]
-    return ' '.join([number.group() + '.'] + names)
+    number = re.search(r"[0-9]+", orgin)
+    names = re.findall(r"[A-Za-z]+", orgin)[1:]
+    return " ".join([number.group() + "."] + names)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     folder_list = glob.glob("*")
     target_folders = [f for f in folder_list if re.match(OLD_PATTERN, f)]
 

@@ -7,5 +7,5 @@ def test_reformat_pattern():
     assert result == "321. This Is A Problem"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     test_reformat_pattern()

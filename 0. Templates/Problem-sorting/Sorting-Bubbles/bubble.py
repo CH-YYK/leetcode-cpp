@@ -20,9 +20,9 @@ def maxAtEnd2(arr, i):
     if i == len(arr) - 1:
         return None
     else:
-        if arr[i] > arr[i+1]:
-            arr[i], arr[i+1] = arr[i+1], arr[i]
-        maxAtEnd2(arr, i+1)
+        if arr[i] > arr[i + 1]:
+            arr[i], arr[i + 1] = arr[i + 1], arr[i]
+        maxAtEnd2(arr, i + 1)
 
 
 def bubble2(arr, i):
@@ -30,7 +30,7 @@ def bubble2(arr, i):
         return None
     else:
         maxAtEnd2(arr, i)
-        bubble2(arr, i+1)
+        bubble2(arr, i + 1)
 
 
 if __name__ == "__main__":
